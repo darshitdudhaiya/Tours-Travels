@@ -5,12 +5,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-      <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Login - SB Admin</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Login - Tours & Travels</title>
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all" />
     <link href="css/hover.css" type="text/css" rel="stylesheet" media="all" />
@@ -18,10 +18,17 @@
     <link href="css/mislider-custom.css" rel="stylesheet" type="text/css" />
     <link href="css/fontawesome-all.min.css" rel="stylesheet" />
     <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet" />
-
+    <style>
+        .img {
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            flex: 1;
+        }
+    </style>
 </head>
- <body class="bg-primary">
-        <div id="layoutAuthentication">
+<body class="">
+    <%--<div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
                     <div class="container" style="height:100vh">
@@ -45,30 +52,75 @@
                                             </div>
                                         </form>
                                     </div>
-                                   <%-- <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
-                                    </div>--%>
+                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
             </div>
+        </div>--%>
+    <section class="ftco-section">
+        <div class="container">
+
+            <%--<div class="row justify-content-center">
+                 <div class="col-md-6 text-center mb-5">
+                     <h2 class="heading-section">Login #05</h2>
+                 </div>
+             </div>--%>
+            <div class="row justify-content-center mt-5 ">
+                <div class="col-md-7 col-lg-5">
+                    <div class="wrap rounded" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                        <div class="img rounded-top" style="background-image: url('https://preview.colorlib.com/theme/bootstrap/login-form-15/images/bg-1.jpg.webp');"></div>
+                        <div class="login-wrap p-4 p-md-5">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4">Sign In</h3>
+                                </div>
+                                <div class="w-100">
+                                    <p class="social-media d-flex justify-content-end">
+                                        <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+                                        <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <form runat="server">
+                                <div class="form-group mt-3">
+                                    <label class="form-control-placeholder" for="username">Username</label>
+                                    <asp:TextBox ID="TextBox1" runat="server" class="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox1" runat="server" ErrorMessage="Username is Required"></asp:RequiredFieldValidator>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-placeholder" for="password">Password</label>
+                                    <asp:TextBox ID="TextBox2" runat="server" class="form-control"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TextBox2" runat="server" ErrorMessage="Password is Required"></asp:RequiredFieldValidator>
+                                </div>
+                                <div class="form-group">
+                                    <asp:Button ID="Button1" runat="server"  class="form-control btn btn-primary rounded submit px-2" Text="Sign In" OnClick="Button1_Click" />
+                                </div>
+
+                            </form>
+                            <p class="text-center">Not a member? <a href="Register.aspx">Sign Up</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-     <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
-     <!-- //js -->
+    </section>
+    <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
+    <!-- //js -->
 
-     <!-- testimonial-plugin -->
-     <script src="js/mislider.js" type="text/javascript"></script>
-     <script src="js/counter.js" type="text/javascript"></script>
-     <!-- //stats -->
-     <!-- start-smooth-scrolling -->
-     <script src="js/move-top.js" type="text/javascript"></script>
-     <script src="js/easing.js" type="text/javascript"></script>
-     <script src="js/SmoothScroll.min.js" type="text/javascript"></script>
+    <!-- testimonial-plugin -->
+    <script src="js/mislider.js" type="text/javascript"></script>
+    <script src="js/counter.js" type="text/javascript"></script>
+    <!-- //stats -->
+    <!-- start-smooth-scrolling -->
+    <script src="js/move-top.js" type="text/javascript"></script>
+    <script src="js/easing.js" type="text/javascript"></script>
+    <script src="js/SmoothScroll.min.js" type="text/javascript"></script>
 
-     <script src="js/bootstrap.js" type="text/javascript"></script>
-    </body>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+</body>
 </html>
 
 <%--<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

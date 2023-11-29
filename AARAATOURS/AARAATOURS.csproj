@@ -138,6 +138,7 @@
     <Content Include="ADMINMASTER\Feedback.aspx" />
     <Content Include="ADMINMASTER\ChangePassword.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="USERMASTER\Category.aspx" />
     <Content Include="USERMASTER\css\bootstrap.css" />
     <Content Include="USERMASTER\css\chocolat.css" />
     <Content Include="USERMASTER\css\fontawesome-all.min.css" />
@@ -201,6 +202,7 @@
     <Content Include="USERMASTER\Home.aspx" />
     <Content Include="USERMASTER\About.aspx" />
     <Content Include="USERMASTER\Gallery.aspx" />
+    <Content Include="USERMASTER\Register.aspx" />
     <Content Include="USERMASTER\ToursBooking.aspx" />
     <Content Include="USERMASTER\MainBooking.aspx" />
     <Content Include="USERMASTER\Login.aspx" />
@@ -272,16 +274,31 @@
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\Services.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="USERMASTER\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USERMASTER\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
     <Compile Include="USERMASTER\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="USERMASTER\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USERMASTER\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USERMASTER\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="USERMASTER\umaster.Master.cs">
       <DependentUpon>umaster.Master</DependentUpon>

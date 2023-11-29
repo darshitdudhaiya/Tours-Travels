@@ -11,13 +11,14 @@ namespace AARAATOURS.USERMASTER
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["Username"] == null)
-            //{
-            //    Response.Redirect("Login.aspx");
-            //}
-            //else
-            //{
-            //}
+            if (Session["Username"] != null)
+            {
+                HyperLink1.Text = (string)Session["Username"];
+            }
+            else
+            {
+                HyperLink1.Text = "Sign In";
+            }
         }
     }
 }
