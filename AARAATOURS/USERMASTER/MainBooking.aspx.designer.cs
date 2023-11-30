@@ -11,7 +11,7 @@ namespace AARAATOURS.USERMASTER
 {
 
 
-    public partial class WebForm5
+    public partial class MainBooking
     {
 
         /// <summary>
@@ -58,23 +58,5 @@ namespace AARAATOURS.USERMASTER
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_Fullname;
-
-        /// <summary>
-        /// btn_Booling_submit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Booling_submit;
-
-        /// <summary>
-        /// LinkButton_signout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton_signout;
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Booking" Language="C#" MasterPageFile="~/USERMASTER/umaster.Master" AutoEventWireup="true" CodeBehind="MainBooking.aspx.cs" Inherits="AARAATOURS.USERMASTER.WebForm5" %>
+﻿<%@ Page Title="Booking" Language="C#" MasterPageFile="~/USERMASTER/umaster.Master" AutoEventWireup="true" CodeBehind="MainBooking.aspx.cs" Inherits="AARAATOURS.USERMASTER.MainBooking" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
@@ -59,12 +59,12 @@
                 </td>
             </tr>
 
-            <tr>
+           <%-- <tr>
                 <td colspan="2" align="center"><asp:Button ID="btn_Booling_submit" runat="server" Text="Submit" BackColor="#669900" Font-Bold="True" Font-Size="Large" ForeColor="White" OnClick="btn_Booling_submit_Click"  ></asp:Button>
 					&nbsp&nbsp&nbsp&nbsp<asp:LinkButton ID="LinkButton_signout" runat="server" Font-Size="X-Small" Font-Underline="True" OnClick="LinkButton_signout_Click" >Logout</asp:LinkButton>
                   
                 </td>
-            </tr>
+            </tr>--%>
         </table>
 	</center>
 	<!--End booking-->

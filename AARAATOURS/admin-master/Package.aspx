@@ -34,7 +34,7 @@
                         </HeaderTemplate>
                         <ItemTemplate>
                             <tr>
-                                <td><%# Eval("id") %></td>
+                                <td><%# Container.ItemIndex + 1 %></td>
                                 <td><%# Eval("category_name") %></td>
                                 <td><%# Eval("sub_category_name") %></td>
                                 <td class="text-left"><%# Eval("name") %></td>

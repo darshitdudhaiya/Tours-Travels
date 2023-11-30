@@ -12,7 +12,9 @@ namespace AARAATOURS.USERMASTER
 {
     public partial class Register : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Data Source=DD\\SQLEXPRESS;Initial Catalog=tours;Integrated Security=True");
+
+         SqlConnection con = new SqlConnection("Data Source=DESKTOP-K4LH2ES\\SQLEXPRESS;Initial Catalog=tours;Integrated Security=True");
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
