@@ -53,7 +53,7 @@ namespace AARAATOURS.USERMASTER
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM [users] WHERE username='" + TextBox1.Text + "' AND password='" + TextBox2.Text + "'";
+            string sql = "SELECT * FROM [users] WHERE (username='" + TextBox1.Text + "' OR email='" + TextBox1.Text + "' ) AND password='" + TextBox2.Text + "' AND [role] = 'client'";
             DataTable dt = Services.select(sql, con);
             if(dt.Rows.Count > 0 )
             {

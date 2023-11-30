@@ -16,8 +16,8 @@ namespace AARAATOURS.Common
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             int affectedRows = cmd.ExecuteNonQuery();
-            return affectedRows;
             con.Close();
+            return affectedRows;
         }
 
 
@@ -27,8 +27,8 @@ namespace AARAATOURS.Common
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            return dt;
             con.Close();
+            return dt;
         }
 
     }
