@@ -29,7 +29,7 @@
                         </HeaderTemplate>
                         <ItemTemplate>
                             <tr>
-                                <td><%# Eval("id") %></td>
+                                <td><%# Container.ItemIndex + 1 %></td>
                                 <td class="text-left"><%# Eval("name") %></td>
                                 <td>
                                     <asp:Button ID="Button1" runat="server" Text="Edit" CssClass="btn btn-primary" />
