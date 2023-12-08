@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/USERMASTER/umaster.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="AARAATOURS.USERMASTER.WebForm9" %>
+﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/USERMASTER/umaster.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="AARAATOURS.USERMASTER.Contact" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
@@ -15,10 +15,11 @@
 					<h6>Please fill this form to contact and feedbacks with us.</h6>
 					<form action="#" method="post">
 						<div class="contact_left_grid">
-                            <asp:TextBox ID="txt_name" placeholder="Name" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_name" type="text" placeholder="Name" runat="server"></asp:TextBox>
 						
+							<asp:TextBox ID="txt_mobile" type="text" placeholder="Mobile Number" runat="server"></asp:TextBox>
 
-							<asp:TextBox ID="txt_email" placeholder="Email" runat="server"></asp:TextBox>
+							<asp:TextBox ID="txt_email" type="email" placeholder="Email" runat="server"></asp:TextBox>
 							
 
 							<asp:TextBox ID="txt_msg" placeholder="Message" runat="server" Rows="5" Columns="5"></asp:TextBox>

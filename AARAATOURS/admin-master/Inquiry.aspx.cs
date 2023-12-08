@@ -1,5 +1,8 @@
-﻿using System;
+﻿using AARAATOURS.Common;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,10 +13,8 @@ using AARAATOURS.Common;
 
 namespace AARAATOURS.admin_master
 {
-    public partial class Category : System.Web.UI.Page
+    public partial class Inquiry : System.Web.UI.Page
     {
-
-
         SqlConnection con = new SqlConnection("Data Source=DD\\SQLEXPRESS;Initial Catalog=tours;Integrated Security=True");
 
         protected void Page_Load(object sender, EventArgs e)
@@ -32,25 +33,10 @@ namespace AARAATOURS.admin_master
                 int recordId = Convert.ToInt32(e.CommandArgument);
                 DeleteRecord(recordId);
             }
-            else
-            {
-                int recordId = Convert.ToInt32(e.CommandArgument);
-                GetRecord(recordId);
-            }
-        }
-
-        private void GetRecord(int recordId)
-        {
-            try
-            {
-                Response.Redirect("UpdateCategory.aspx?updateId=" + recordId);
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "')</script>");
-            }
 
         }
+
+
 
 
         private void DeleteRecord(int recordId)
@@ -58,11 +44,11 @@ namespace AARAATOURS.admin_master
             try
             {
 
-                string sql = "DELETE FROM [category] WHERE id = " + recordId;
+                string sql = "DELETE FROM [inquiry] WHERE id = " + recordId;
                 int response = Services.execute(sql, con);
                 if (response == 1)
                 {
-                    Response.Redirect("Category.aspx");
+                    Response.Redirect("inquiry.aspx");
                 }
                 else
                 {
@@ -80,10 +66,10 @@ namespace AARAATOURS.admin_master
 
         protected void display_data()
         {
-
             try
             {
-                string sql = "SELECT * FROM category";
+                string sql = "SELECT inquiry.id, inquiry.package_id, inquiry.name, inquiry.mobile_number, inquiry.email, package.name AS package_name, inquiry.gender, inquiry.no_of_days, inquiry.child, inquiry.adults, inquiry.message FROM inquiry INNER JOIN package ON inquiry.package_id = package.id";
+
                 DataTable dt = Services.select(sql, con);
                 if (dt.Rows.Count > 0)
                 {
@@ -96,7 +82,5 @@ namespace AARAATOURS.admin_master
                 Response.Write("<script>alert('" + ex.Message + "')</script>");
             }
         }
-
-
     }
 }

@@ -6,15 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SqlClient;
+using AARAATOURS.Common;
 
 namespace AARAATOURS.USERMASTER
 {
-    public partial class WebForm9 : System.Web.UI.Page
+    public partial class Contact : System.Web.UI.Page
     {
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\AARAATOURS\aaraadata.mdb");
-        OleDbCommand cmd;
-        OleDbDataAdapter da = new OleDbDataAdapter();
-        DataSet ds = new DataSet();
+        SqlConnection con = new SqlConnection("Data Source=DD\\SQLEXPRESS;Initial Catalog=tours;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -24,17 +23,16 @@ namespace AARAATOURS.USERMASTER
         {
             try
             {
-                con.Open();
-
-
-                
-
-
-                string str1 = "insert into ContactTbl (fname,femail,fmsg) values ('"+txt_name.Text+"','"+txt_email.Text+"','"+txt_msg.Text+"')";
-                cmd = new OleDbCommand(str1, con);
-                cmd.ExecuteNonQuery();
-
-                Response.Write("<script>alert('Feedback Send Successfully')</script>");
+                 string sql = "insert into [contact] (name,mobile_number,email,message) values ('"+txt_name.Text+ "','"+txt_mobile.Text+"','" + txt_email.Text+"','"+txt_msg.Text+"')";
+                int response = Services.execute(sql, con);
+                if (response == 1)
+                {
+                    Response.Redirect("Home.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Something goes Wrong in deleting !')</script>");
+                }
             }
             catch(Exception ex1)
             {

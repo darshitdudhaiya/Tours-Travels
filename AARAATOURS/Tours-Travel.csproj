@@ -89,7 +89,9 @@
     <Content Include="admin-master\AddUser.aspx" />
     <Content Include="admin-master\Category.aspx" />
     <Content Include="admin-master\chart.aspx" />
+    <Content Include="admin-master\Contact.aspx" />
     <Content Include="admin-master\dashboard.aspx" />
+    <Content Include="admin-master\Inquiry.aspx" />
     <Content Include="admin-master\js\bootstrap.js" />
     <Content Include="admin-master\js\counter.js" />
     <Content Include="admin-master\js\easing.js" />
@@ -100,10 +102,13 @@
     <Content Include="admin-master\js\SmoothScroll.min.js" />
     <Content Include="admin-master\lightsidenav.aspx" />
     <Content Include="admin-master\Login.aspx" />
-    <Content Include="admin-master\Logout.aspx" />
+    <Content Include="admin-master\logout.aspx" />
     <Content Include="admin-master\Package.aspx" />
     <Content Include="admin-master\SubCategory.aspx" />
     <Content Include="admin-master\tables.aspx" />
+    <Content Include="admin-master\UpdateCategory.aspx" />
+    <Content Include="admin-master\UpdatePackage.aspx" />
+    <Content Include="admin-master\UpdateSubCategory.aspx" />
     <Content Include="Global.asax" />
     <Content Include="USERMASTER\Category.aspx" />
     <Content Include="USERMASTER\css\bootstrap.css" />
@@ -169,6 +174,7 @@
     <Content Include="USERMASTER\Home.aspx" />
     <Content Include="USERMASTER\About.aspx" />
     <Content Include="USERMASTER\Gallery.aspx" />
+    <Content Include="USERMASTER\Packages.aspx" />
     <Content Include="USERMASTER\Register.aspx" />
     <Content Include="USERMASTER\ToursBooking.aspx" />
     <Content Include="USERMASTER\MainBooking.aspx" />
@@ -247,12 +253,26 @@
     <Compile Include="admin-master\chart.aspx.designer.cs">
       <DependentUpon>chart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin-master\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-master\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin-master\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin-master\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-master\Inquiry.aspx.cs">
+      <DependentUpon>Inquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-master\Inquiry.aspx.designer.cs">
+      <DependentUpon>Inquiry.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin-master\lightsidenav.aspx.cs">
       <DependentUpon>lightsidenav.aspx</DependentUpon>
@@ -268,12 +288,12 @@
     <Compile Include="admin-master\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin-master\Logout.aspx.cs">
-      <DependentUpon>Logout.aspx</DependentUpon>
+    <Compile Include="admin-master\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin-master\Logout.aspx.designer.cs">
-      <DependentUpon>Logout.aspx</DependentUpon>
+    <Compile Include="admin-master\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin-master\Package.aspx.cs">
       <DependentUpon>Package.aspx</DependentUpon>
@@ -296,6 +316,27 @@
     <Compile Include="admin-master\tables.aspx.designer.cs">
       <DependentUpon>tables.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin-master\UpdateCategory.aspx.cs">
+      <DependentUpon>UpdateCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-master\UpdateCategory.aspx.designer.cs">
+      <DependentUpon>UpdateCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-master\UpdatePackage.aspx.cs">
+      <DependentUpon>UpdatePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-master\UpdatePackage.aspx.designer.cs">
+      <DependentUpon>UpdatePackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-master\UpdateSubCategory.aspx.cs">
+      <DependentUpon>UpdateSubCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-master\UpdateSubCategory.aspx.designer.cs">
+      <DependentUpon>UpdateSubCategory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\Services.cs" />
     <Compile Include="Global.asax.cs">
@@ -315,6 +356,13 @@
     </Compile>
     <Compile Include="USERMASTER\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USERMASTER\Packages.aspx.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USERMASTER\Packages.aspx.designer.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
     </Compile>
     <Compile Include="USERMASTER\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

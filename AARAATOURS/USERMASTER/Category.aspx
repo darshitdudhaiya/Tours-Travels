@@ -6,11 +6,11 @@
     <section class="wthree-row w3-about py-lg-5">
         <div class="container py-5">
             <div class="title-section pb-sm-5 pb-3">
-                <h3 class="heading-agileinfo text-center pb-4">Packages <span>Slot</span></h3>
+                <h3 class="heading-agileinfo text-center pb-4">Sub Category <span>Slot</span></h3>
             </div>
 
-            <div class="row row-cols-md-2 row-cols-lg-3 ">
-                <div class="card col-md-6 col-lg-4">
+            <div class="row row-cols-md-2 row-cols-lg-3 gap-3">
+                <%--<div class="card col-md-6 col-lg-4">
                     <img src="images/g1.jpg" class="" data-toggle="modal" data-target="#myModal" alt="Card image cap">
                     <div class="card-body w3ls-card">
                         <h5 class="card-title">Germany</h5>
@@ -19,7 +19,20 @@
                         <a href="#" class="btn btn-primary">₹500</a>
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myBookModal">Book</button>
                     </div>
-                </div>
+                </div>--%>
+                <asp:Repeater ID="cardRepeater" runat="server">
+                    <ItemTemplate>
+                        <div class="card col-md-6 col-lg-4">
+                            <img src='<%# Eval("image", "/admin-master/images/{0}") %>' class=""  alt="Card image cap">
+                            <div class="card-body w3ls-card">
+                               <a href='<%# "Packages.aspx?id="+Eval("id") %>' style="background:transparent"> <h5 class="card-title"><%# Eval("name") %></h5></a>
+                                <p class="card-text mb-3"><span style="color: #cc2105">Category Name : </span><%# Eval("category_name") %> </p>
+                                <p class="card-text mb-3"><%# Eval("details") %></p>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+
             </div>
         </div>
     </section>
@@ -45,12 +58,13 @@
                                 <img src="images/g1.jpg" class="" alt="Card image cap">
                             </div>
                         </div>
-                        
+
                         <span>Category:<b><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></b></span><br />
                         <span>SubCategory:<b><asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></b></span><br />
                         <span>Price:<b><asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></b></span>
 
-                        <p><asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></p>
+                        <p>
+                            <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></p>
                     </div>
                     <%-- <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -76,7 +90,7 @@
                             <%--<input id="exampleFormControlInput1" placeholder="Enter Name">--%>
                             <asp:TextBox ID="TextBox1" runat="server" type="text" class="form-control"></asp:TextBox>
                         </div>
-                        
+
                         <label>Gender:</label>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">

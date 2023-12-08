@@ -8,7 +8,7 @@
 
         <!-- Page Heading -->
         <div class="">
-            <h1 class="h3 mb-3 text-gray-800">Add Student</h1>
+            <h1 class="h3 mb-3 text-gray-800">Add Package</h1>
         </div>
 
         <div class="mb-3 border border-2 shadow p-4 rounded-3">

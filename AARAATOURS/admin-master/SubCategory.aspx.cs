@@ -35,6 +35,24 @@ namespace AARAATOURS.admin_master
                 int recordId = Convert.ToInt32(e.CommandArgument);
                 DeleteRecord(recordId);
             }
+            else
+            {
+                int recordId = Convert.ToInt32(e.CommandArgument);
+                GetRecord(recordId);
+            }
+        }
+
+        private void GetRecord(int recordId)
+        {
+            try
+            {
+                Response.Redirect("UpdateSubCategory.aspx?updateId=" + recordId);
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
+
         }
 
 

@@ -34,6 +34,24 @@ namespace AARAATOURS.admin_master
                 int recordId = Convert.ToInt32(e.CommandArgument);
                 DeleteRecord(recordId);
             }
+            else
+            {
+                int recordId = Convert.ToInt32(e.CommandArgument);
+                GetRecord(recordId);
+            }
+        }
+
+        private void GetRecord(int recordId)
+        {
+            try
+            {
+                Response.Redirect("UpdatePackage.aspx?updateId=" + recordId);
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
+
         }
 
 
@@ -46,7 +64,7 @@ namespace AARAATOURS.admin_master
                 int response = Services.execute(sql, con);
                 if (response == 1)
                 {
-                    Response.Redirect("SubCategory.aspx");
+                    Response.Redirect("Package.aspx");
                 }
                 else
                 {
@@ -64,7 +82,6 @@ namespace AARAATOURS.admin_master
 
         protected void display_data()
         {
-
             try
             {
                 string sql = "SELECT package.id, package.cat_id, package.sub_cat_id, category.name AS category_name, sub_category.name AS sub_category_name, package.name, package.image_1, package.image_2, package.image_3, package.details, package.price FROM package INNER JOIN category ON package.cat_id = category.id INNER JOIN sub_category ON package.sub_cat_id = sub_category.id";
@@ -81,5 +98,7 @@ namespace AARAATOURS.admin_master
                 Response.Write("<script>alert('" + ex.Message + "')</script>");
             }
         }
+
+       
     }
 }

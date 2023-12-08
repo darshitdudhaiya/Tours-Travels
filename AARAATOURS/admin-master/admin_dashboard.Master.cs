@@ -19,5 +19,11 @@ namespace AARAATOURS.admin_master
             lblusername.Text = (string)Session["Username"];
            
         }
+
+        protected void Logout(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("Login.aspx");
+        }
     }
 }

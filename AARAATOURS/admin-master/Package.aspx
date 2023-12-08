@@ -20,7 +20,7 @@
                             <table id="datatablesSimple" class="table table-bordered rounded">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
+                                        <th>Index</th>
                                         <th>Category Name</th>
                                         <th>Sub Category Name</th>
                                         <th>Name</th>
@@ -50,7 +50,7 @@
                                     <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("image_3", "images/{0}") %>' Height="100" Width="100" />
                                 </td>
                                 <td>
-                                    <asp:Button ID="Button1" runat="server" Text="Edit" CssClass="btn btn-primary" />
+                                    <asp:Button ID="Button1" runat="server" Text="Edit" CssClass="btn btn-primary" CommandName="GetRecord" CommandArgument='<%# Eval("id") %>'/>
                                 </td>
                                 <td>
                                     <asp:Button ID="Button2" runat="server" Text="Delete" CssClass="btn btn-danger" CommandName="DeleteRecord" CommandArgument='<%# Eval("id") %>' />

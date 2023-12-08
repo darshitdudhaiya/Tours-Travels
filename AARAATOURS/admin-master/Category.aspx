@@ -20,7 +20,7 @@
                             <table id="datatablesSimple" class="table table-bordered rounded">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
+                                        <th>Index</th>
                                         <th>Category Name</th>
                                         <th colspan="2">Action</th>
                                     </tr>
@@ -32,7 +32,7 @@
                                 <td><%# Container.ItemIndex + 1 %></td>
                                 <td class="text-left"><%# Eval("name") %></td>
                                 <td>
-                                    <asp:Button ID="Button1" runat="server" Text="Edit" CssClass="btn btn-primary" />
+                                    <asp:Button ID="Button1" runat="server" Text="Edit" CssClass="btn btn-primary" CommandName="GetRecord" CommandArgument='<%# Eval("id") %>'/>
                                 </td>
                                 <td>
                                     <asp:Button ID="Button2" runat="server" Text="Delete" CssClass="btn btn-danger" CommandName="DeleteRecord" CommandArgument='<%# Eval("id") %>' />

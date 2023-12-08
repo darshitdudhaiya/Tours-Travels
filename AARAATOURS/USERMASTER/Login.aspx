@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-placeholder" for="password">Password</label>
-                                    <asp:TextBox ID="TextBox2" runat="server" class="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox2" runat="server" class="form-control" Type="password"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TextBox2" runat="server" ErrorMessage="Password is Required"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">

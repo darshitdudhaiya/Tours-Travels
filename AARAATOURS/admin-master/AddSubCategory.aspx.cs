@@ -20,7 +20,10 @@ namespace AARAATOURS.admin_master
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            display_category();
+            if (!IsPostBack)
+            {
+                display_category();
+            }
         }
 
         public void display_category()

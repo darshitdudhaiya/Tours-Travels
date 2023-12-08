@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/admin-master/admin_dashboard.Master" AutoEventWireup="true" CodeBehind="SubCategory.aspx.cs" Inherits="AARAATOURS.admin_master.SubCategory" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/admin-master/admin_dashboard.Master" AutoEventWireup="true" CodeBehind="Inquiry.aspx.cs" Inherits="AARAATOURS.admin_master.Inquiry" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -6,12 +6,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid text-center">
-        <h1 class="mt-4">Sub Category</h1>
+        <h1 class="mt-4">Inquiry</h1>
         <div class="card mb-4">
             <div class="card-header d-flex justify-content-around">
-                <a href="AddSubCategory.aspx">
-                    <i class="fas fa-plus me-1 btn btn-primary"></i>
-                </a>
+              
             </div>
             <div class="card-body table-responsive">
                 <form runat="server">
@@ -21,27 +19,32 @@
                                 <thead>
                                     <tr>
                                         <th>Index</th>
-                                        <th>Category Name</th>
-                                        <th>Sub Category Name</th>
-                                        <th>Sub Category Details</th>
-                                        <th>Sub Category Image</th>
-                                        <th colspan="2">Action</th>
+                                        <th>Package</th>
+                                        <th>Name</th>
+                                        <th>Gender</th>
+                                        <th>Mobile Number</th>
+                                        <th>Email</th>
+                                        <th>Number Of Days</th>
+                                        <th>Child</th>
+                                        <th>Adults</th>
+                                        <th>Message</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                         </HeaderTemplate>
                         <ItemTemplate>
                             <tr>
-                                 <td><%# Container.ItemIndex + 1 %></td>
-                                <td><%# Eval("category_name") %></td>
-                                <td class="text-left"><%# Eval("name") %></td>
-                                <td class="text-left"><%# Eval("details") %></td>
-                                <td>
-                                    <asp:Image ID="imgSubCategory" runat="server" ImageUrl='<%# Eval("image", "images/{0}") %>' Height="100" Width="100" />
-                                </td>
-                                <td>
-                                    <asp:Button ID="Button1" runat="server" Text="Edit" CssClass="btn btn-primary" CommandName="GetRecord" CommandArgument='<%# Eval("id") %>'/>
-                                </td>
+                                <td><%# Container.ItemIndex + 1 %></td>
+                                <td><%# Eval("package_name") %></td>
+                                <td><%# Eval("name") %></td>
+                                <td><%# Eval("gender") %></td>
+                                <td><%# Eval("mobile_number") %></td>
+                                <td><%# Eval("email") %></td>
+                                <td><%# Eval("no_of_days") %></td>
+                                <td><%# Eval("child") %></td>
+                                <td><%# Eval("adults") %></td>
+                                <td><%# Eval("message") %></td>
                                 <td>
                                     <asp:Button ID="Button2" runat="server" Text="Delete" CssClass="btn btn-danger" CommandName="DeleteRecord" CommandArgument='<%# Eval("id") %>' />
                                 </td>
