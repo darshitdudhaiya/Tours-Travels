@@ -16,12 +16,12 @@
              <div class="row">
                  <div class="form-group col-md-6">
                      <label class="fw-semibold">Select Category</label>
-                     <asp:DropDownList ID="DropDownList2" runat="server" class="form-control" DataValueField="id" DataTextField="name" AutoPostBack="True" OnSelectedIndexChanged="cmbcourse_SelectedIndexChanged">
+                     <asp:DropDownList ID="DropDownList2" runat="server" class="form-control" DataValueField="id" DataTextField="name" AutoPostBack="False" OnSelectedIndexChanged="cmbcourse_SelectedIndexChanged">
                      </asp:DropDownList>
                  </div>
                  <div class="form-group col-md-6">
                      <label class="fw-semibold">Select Subcategory</label>
-                     <asp:DropDownList ID="DropDownList1" runat="server" class="form-control" DataValueField="id" DataTextField="name" AutoPostBack="True">
+                     <asp:DropDownList ID="DropDownList1" runat="server" class="form-control" DataValueField="id" DataTextField="name" AutoPostBack="False">
                      </asp:DropDownList>
                  </div>
 

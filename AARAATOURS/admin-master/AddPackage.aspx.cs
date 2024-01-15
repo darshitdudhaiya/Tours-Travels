@@ -87,8 +87,8 @@ namespace AARAATOURS.admin_master
                 if ((extension1.ToLower() == ".jpg" || extension1.ToLower() == ".png" || extension1.ToLower() == ".jpeg") && (extension2.ToLower() == ".jpg" || extension2.ToLower() == ".png" || extension2.ToLower() == ".jpeg") && (extension3.ToLower() == ".jpg" || extension3.ToLower() == ".png" || extension3.ToLower() == ".jpeg"))
                 {
                     FileUpload1.SaveAs(path + filename1);
-                    FileUpload1.SaveAs(path + filename2);
-                    FileUpload1.SaveAs(path + filename3);
+                    FileUpload2.SaveAs(path + filename2);
+                    FileUpload4.SaveAs(path + filename3);
                     string sql = "INSERT INTO [package] (cat_id,sub_cat_id,name,price,image_1,image_2,image_3,details) VALUES('" + DropDownList2.SelectedValue + "','" + DropDownList1.SelectedValue + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + filename1 + "','" + filename2+ "','" + filename3+ "','" + TextBox2.Text + "')";
                     int response = Services.execute(sql, con);
                     if (response == 1)
